@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_absr_itsm.UpsertCdfs</api_name>
+        <client_callable>false</client_callable>
+        <description>Update or insert CDF values for a device.</description>
+        <name>UpsertCdfs</name>
+        <script><![CDATA[var UpsertCdfs = Class.create();
+UpsertCdfs.prototype = {
+	initialize: function() {
+	},
+	
+	update : function (deviceGuid,deviceSysId){
+		var device = new GlideRecord('x_absr_itsm_device');
+		device.addQuery('id', deviceGuid);
+		device.query();
+		
+		if(device.next()) {
+			// Get data from API.
+			var apiSecret = gs.getProperty('x_absr_itsm.API_Secret');
+			var apiToken = gs.getProperty('x_absr_itsm.API_Token');
+			var api = new AbsoluteAPI(apiToken, apiSecret);
+			var cdfData = api.fetchCdfsBySerial(device.serial).cdfValues;
+			
+			for(var i = 0; i < cdfData.length; i++) {
+				var currentCdfData = cdfData[i];
+				
+				var existingCdf = new GlideRecord('x_absr_itsm_custom_fields');
+				existingCdf.addQuery('id', currentCdfData.cdfUid);
+				existingCdf.addQuery('device', deviceSysId);
+				existingCdf.query();
+				
+				if(existingCdf.next()) {
+					// Update CDF value.
+					existingCdf.id = currentCdfData.cdfUid;
+					existingCdf.name = currentCdfData.fieldName;
+					existingCdf.value = currentCdfData.fieldValue;
+					existingCdf.device = deviceSysId;
+					existingCdf.sys_updated_on = new GlideDateTime().getDisplayValue();
+					existingCdf.update();
+				}
+				else {
+					// Insert CDF value.
+					existingCdf.initialize();
+					
+					existingCdf.id = currentCdfData.cdfUid;
+					existingCdf.name = currentCdfData.fieldName;
+					existingCdf.value = currentCdfData.fieldValue;
+					existingCdf.device = deviceSysId;
+					existingCdf.sys_updated_on = new GlideDateTime().getDisplayValue();
+					existingCdf.insert();
+				}
+			}
+		}
+	},
+	
+	type: 'UpsertCdfs'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>matt.wood</sys_created_by>
+        <sys_created_on>2019-01-25 22:25:09</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>6e7fcca0db1be740cb8fd77648961918</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>UpsertCdfs</sys_name>
+        <sys_package display_value="Absolute ITSM Connector" source="x_absr_itsm">334c86f7dbc7a740cb8fd77648961963</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Absolute ITSM Connector">334c86f7dbc7a740cb8fd77648961963</sys_scope>
+        <sys_update_name>sys_script_include_6e7fcca0db1be740cb8fd77648961918</sys_update_name>
+        <sys_updated_by>matt.wood</sys_updated_by>
+        <sys_updated_on>2019-01-28 18:07:24</sys_updated_on>
+    </sys_script_include>
+</record_update>

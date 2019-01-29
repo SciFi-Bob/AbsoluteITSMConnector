@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_form_sections form_id="e7f90740db13e740cb8fd77648961906" sys_domain="global" table="x_absr_itsm_device" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>matt.wood</sys_created_by>
+            <sys_created_on>2019-01-24 22:42:44</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6ff90740db13e740cb8fd77648961908</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_absr_itsm_device" name="x_absr_itsm_device" sys_domain="global" view="Default view">e7f90740db13e740cb8fd77648961906</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">e3f90740db13e740cb8fd77648961905</sys_ui_section>
+            <sys_updated_by>matt.wood</sys_updated_by>
+            <sys_updated_on>2019-01-24 22:42:44</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>matt.wood</sys_created_by>
+            <sys_created_on>2019-01-24 22:42:44</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6bf90740db13e740cb8fd77648961909</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_absr_itsm_device" name="x_absr_itsm_device" sys_domain="global" view="Default view">e7f90740db13e740cb8fd77648961906</sys_ui_form>
+            <sys_ui_section caption="Hardware Details" display_value="Hardware Details" name="x_absr_itsm_device" sys_domain="global" view="Default view">abf90740db13e740cb8fd77648961905</sys_ui_section>
+            <sys_updated_by>matt.wood</sys_updated_by>
+            <sys_updated_on>2019-01-24 22:42:44</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>matt.wood</sys_created_by>
+            <sys_created_on>2019-01-24 22:43:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e93a8740db13e740cb8fd77648961904</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_absr_itsm_device" name="x_absr_itsm_device" sys_domain="global" view="Default view">e7f90740db13e740cb8fd77648961906</sys_ui_form>
+            <sys_ui_section caption="Policy Status" display_value="Policy Status" name="x_absr_itsm_device" sys_domain="global" view="Default view">653a8740db13e740cb8fd77648961902</sys_ui_section>
+            <sys_updated_by>matt.wood</sys_updated_by>
+            <sys_updated_on>2019-01-24 22:43:42</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>3</position>
+            <sys_created_by>matt.wood</sys_created_by>
+            <sys_created_on>2019-01-24 22:59:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>83bdcb80db13e740cb8fd776489619ad</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_absr_itsm_device" name="x_absr_itsm_device" sys_domain="global" view="Default view">e7f90740db13e740cb8fd77648961906</sys_ui_form>
+            <sys_ui_section caption="Operating System" display_value="Operating System" name="x_absr_itsm_device" sys_domain="global" view="Default view">c7bd4b80db13e740cb8fd776489619c5</sys_ui_section>
+            <sys_updated_by>matt.wood</sys_updated_by>
+            <sys_updated_on>2019-01-24 22:59:05</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>4</position>
+            <sys_created_by>matt.wood</sys_created_by>
+            <sys_created_on>2019-01-24 23:28:11</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1d645744db13e740cb8fd776489619f1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_absr_itsm_device" name="x_absr_itsm_device" sys_domain="global" view="Default view">e7f90740db13e740cb8fd77648961906</sys_ui_form>
+            <sys_ui_section caption="Antivirus" display_value="Antivirus" name="x_absr_itsm_device" sys_domain="global" view="Default view">1d641744db13e740cb8fd77648961909</sys_ui_section>
+            <sys_updated_by>matt.wood</sys_updated_by>
+            <sys_updated_on>2019-01-24 23:28:11</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>5</position>
+            <sys_created_by>matt.wood</sys_created_by>
+            <sys_created_on>2019-01-24 23:43:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0cd753c4db13e740cb8fd77648961961</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_absr_itsm_device" name="x_absr_itsm_device" sys_domain="global" view="Default view">e7f90740db13e740cb8fd77648961906</sys_ui_form>
+            <sys_ui_section caption="Encryption" display_value="Encryption" name="x_absr_itsm_device" sys_domain="global" view="Default view">c0d753c4db13e740cb8fd7764896195e</sys_ui_section>
+            <sys_updated_by>matt.wood</sys_updated_by>
+            <sys_updated_on>2019-01-24 23:43:07</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>6</position>
+            <sys_created_by>matt.wood</sys_created_by>
+            <sys_created_on>2019-01-24 23:53:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e11a9308db13e740cb8fd77648961906</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_absr_itsm_device" name="x_absr_itsm_device" sys_domain="global" view="Default view">e7f90740db13e740cb8fd77648961906</sys_ui_form>
+            <sys_ui_section caption="CPU" display_value="CPU" name="x_absr_itsm_device" sys_domain="global" view="Default view">a51a9308db13e740cb8fd77648961901</sys_ui_section>
+            <sys_updated_by>matt.wood</sys_updated_by>
+            <sys_updated_on>2019-01-24 23:53:03</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>7</position>
+            <sys_created_by>matt.wood</sys_created_by>
+            <sys_created_on>2019-01-24 23:53:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>251a9308db13e740cb8fd7764896190b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_absr_itsm_device" name="x_absr_itsm_device" sys_domain="global" view="Default view">e7f90740db13e740cb8fd77648961906</sys_ui_form>
+            <sys_ui_section caption="BIOS" display_value="BIOS" name="x_absr_itsm_device" sys_domain="global" view="Default view">ad1a9308db13e740cb8fd77648961901</sys_ui_section>
+            <sys_updated_by>matt.wood</sys_updated_by>
+            <sys_updated_on>2019-01-24 23:53:03</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>8</position>
+            <sys_created_by>matt.wood</sys_created_by>
+            <sys_created_on>2019-01-24 23:53:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a11a9308db13e740cb8fd7764896191d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_absr_itsm_device" name="x_absr_itsm_device" sys_domain="global" view="Default view">e7f90740db13e740cb8fd77648961906</sys_ui_form>
+            <sys_ui_section caption="History" display_value="History" name="x_absr_itsm_device" sys_domain="global" view="Default view">a51a9308db13e740cb8fd77648961902</sys_ui_section>
+            <sys_updated_by>matt.wood</sys_updated_by>
+            <sys_updated_on>2019-01-24 23:53:03</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>9</position>
+            <sys_created_by>matt.wood</sys_created_by>
+            <sys_created_on>2019-01-24 23:53:17</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>452a5308db13e740cb8fd776489619f2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_absr_itsm_device" name="x_absr_itsm_device" sys_domain="global" view="Default view">e7f90740db13e740cb8fd77648961906</sys_ui_form>
+            <sys_ui_section caption="Raw" display_value="Raw" name="x_absr_itsm_device" sys_domain="global" view="Default view">0d2a5308db13e740cb8fd776489619ed</sys_ui_section>
+            <sys_updated_by>matt.wood</sys_updated_by>
+            <sys_updated_on>2019-01-24 23:53:17</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_absr_itsm_device</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>matt.wood</sys_created_by>
+            <sys_created_on>2019-01-24 22:42:44</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e7f90740db13e740cb8fd77648961906</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_absr_itsm_device</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Absolute ITSM Connector" source="x_absr_itsm">334c86f7dbc7a740cb8fd77648961963</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Absolute ITSM Connector">334c86f7dbc7a740cb8fd77648961963</sys_scope>
+            <sys_update_name>sys_ui_form_sections_e7f90740db13e740cb8fd77648961906</sys_update_name>
+            <sys_updated_by>matt.wood</sys_updated_by>
+            <sys_updated_on>2019-01-24 22:42:44</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

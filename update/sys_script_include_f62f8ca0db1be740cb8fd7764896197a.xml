@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_absr_itsm.AbsoluteAPI</api_name>
+        <client_callable>false</client_callable>
+        <description>API Access.</description>
+        <name>AbsoluteAPI</name>
+        <script><![CDATA[var AbsoluteAPI = Class.create();
+AbsoluteAPI.prototype = {
+	initialize: function(apiToken, apiSecret) {
+		this.apiToken = apiToken;
+		this.apiSecret = apiSecret;
+		this.log = new global.GSLog("x_absr_itsm.logging.verbosity", "AbsoluteAPI");
+	},
+	fetchAbsoluteUid : function (serialNumber){
+		// Use that serial Number to go and get the Uid from Absolute servers
+		try {
+			var query = "$filter=agentStatus eq 'A' and substringof(Serial, '" + serialNumber + "')&$orderby=firstCallUtc desc&$select=id";
+			var abtDT = this._getAbtDateTime();
+			var authH = this._generateAuthHeader(this.apiToken, this.apiSecret, abtDT, "GET", "/v2/reporting/devices", query, "");
+			
+			var r = new sn_ws.RESTMessageV2('x_absr_itsm.AbsoluteAPI', 'LookupDeviceIdBySerialNumber');
+			r.setStringParameterNoEscape('abtDateTime', abtDT);
+			r.setStringParameterNoEscape('abtAuthHeader', authH);
+			r.setStringParameterNoEscape('serial', serialNumber);
+			
+			var response = r.execute();
+			var httpStatus = response.getStatusCode();
+			var sResponse = response.getBody(); //get response as string
+						
+			if(httpStatus == "200"){
+				if(sResponse) {
+					this.log.logDebug(sResponse);	
+				}
+				
+				//We got a good response from the API
+				if(sResponse == "[]"){
+					//The response was blank so we did not find the Serial Number
+					gs.addErrorMessage("Absolute is either not installed or not enabled on this device.");
+					return ""; //Need an error Message here
+				}
+				else{
+					//We got a valid response
+					var jResponse = global.JSON.parse(sResponse); //Convert response to Json Object
+					var id = jResponse[0].id;
+					//Return the ID as requested
+					return String(id);
+				}
+			}
+			else if(httpStatus == "400"){
+				if(sResponse) {
+					this.log.logErr(sResponse);
+				}
+				
+				var jResponse = global.JSON.parse(sResponse); //Convert response to Json Object
+				if(jResponse.errors[0]){
+					gs.addErrorMessage("Absolute API Error, please try again later. Received message was: " + jResponse.errors[0].message);
+					return "";
+				}
+				else{
+					gs.addErrorMessage("Absolute API Error, please try again later.");
+					return "";
+				}
+			}
+			else if(httpStatus == "401"){
+				if(sResponse) {
+					this.log.logErr(sResponse);
+				}
+				gs.addErrorMessage("Absolute API Error: API Authentication failed");
+				return "";
+			}
+			else{
+				if(sResponse) {
+					this.log.logErr(sResponse);
+				}
+				gs.addErrorMessage("Absolute API Error, please try again later.");
+				return "";
+			}
+		}
+		catch(ex) {
+			var temp = ex;
+			return "error";
+		}
+	},
+	
+	fetchDeviceBySerial : function (serialNumber){
+		try {
+			var id = this.fetchAbsoluteUid(serialNumber);
+			
+			if(!id) {
+				return null;
+			}
+			
+			var query = "$filter=agentStatus eq 'A' and id eq '" + id + "'";
+			var abtDT = this._getAbtDateTime();
+			var authH = this._generateAuthHeader(this.apiToken, this.apiSecret, abtDT, "GET", "/v2/reporting/devices", query, "");
+			
+			var r = new sn_ws.RESTMessageV2('x_absr_itsm.AbsoluteAPI', 'LookupSingleDeviceWithId');
+			r.setStringParameterNoEscape('abtDateTime', abtDT);
+			r.setStringParameterNoEscape('abtAuthHeader', authH);
+			r.setStringParameterNoEscape('id', id);
+			
+			var response = r.execute();
+			var httpStatus = response.getStatusCode();
+			var sResponse = response.getBody(); //get response as string
+						
+			if(httpStatus == "200"){
+				if(sResponse) {
+					this.log.logDebug(sResponse);	
+				}
+				
+				//We got a good response from the API
+				if(sResponse == "[]"){
+					//The response was blank so we did not find the Serial Number
+					gs.addErrorMessage("Absolute is either not installed or not enabled on this device.");
+					return ""; //Need an error Message here
+				}
+				else{
+					//We got a valid response
+					var jResponse = global.JSON.parse(sResponse); //Convert response to Json Object
+					return jResponse[0];
+				}
+			}
+			else if(httpStatus == "400"){
+				if(sResponse) {
+					this.log.logErr(sResponse);
+				}
+				var jResponse = global.JSON.parse(sResponse); //Convert response to Json Object
+				if(jResponse.errors[0]){
+					gs.addErrorMessage("Absolute API Error, Serial Lookup failed. Message was: " + jResponse.errors[0].message);
+					return "";
+				}
+				else{
+					gs.addErrorMessage("Absolute API Error, Serial Lookup Failed: Unknown Error");
+					return "";
+				}
+			}
+			else if(httpStatus == "401"){
+				if(sResponse) {
+					this.log.logErr(sResponse);
+				}
+				gs.addErrorMessage("Absolute API Error, Serial Lookup Failed: API Authentication failed");
+				return "";
+			}
+			else{
+				if(sResponse) {
+					this.log.logErr(sResponse);
+				}
+				gs.addErrorMessage("Absolute API Error, Serial Lookup Failed: Unknown Error");
+				return "";
+			}
+		}
+		catch(ex) {
+			var temp = ex;
+			return "error";
+		}
+	},
+	
+	fetchCdfsBySerial : function (serialNumber){
+		try {
+			var id = this.fetchAbsoluteUid(serialNumber);
+			
+			if(!id) {
+				return null;
+			}
+			
+			var abtDT = this._getAbtDateTime();
+			var authH = this._generateAuthHeader(this.apiToken, this.apiSecret, abtDT, "GET", "/v2/devices/" + id + "/cdf", "", "");
+			
+			var r = new sn_ws.RESTMessageV2('x_absr_itsm.AbsoluteAPI', 'LookupCdfs');
+			r.setStringParameterNoEscape('abtDateTime', abtDT);
+			r.setStringParameterNoEscape('abtAuthHeader', authH);
+			r.setStringParameterNoEscape('deviceUid', id);
+			
+			var response = r.execute();
+			var httpStatus = response.getStatusCode();
+			var sResponse = response.getBody(); //get response as string
+						
+			if(httpStatus == "200"){
+				if(sResponse) {
+					this.log.logDebug(sResponse);	
+				}
+				var jResponse = global.JSON.parse(sResponse); //Convert response to Json Object
+				return jResponse;
+			}
+			else if(httpStatus == "400"){
+				if(sResponse) {
+					this.log.logErr(sResponse);
+				}
+				var errorResponse = global.JSON.parse(sResponse); //Convert response to Json Object
+				if(errorResponse.errors[0]){
+					gs.addErrorMessage("Absolute API Error, CDF Lookup failed: " + errorResponse.errors[0].message);
+					return "";
+				}
+				else{
+					if(sResponse) {
+					this.log.logErr(sResponse);
+					}
+					gs.addErrorMessage("Absolute API Error, CDF Lookup Failed: Unknown Error");
+					return "";
+				}
+			}
+			else if(httpStatus == "401"){
+				if(sResponse) {
+					this.log.logErr(sResponse);
+				}
+				gs.addErrorMessage("Absolute API Error, CDF Lookup Failed: API Authentication failed");
+				return "";
+			}
+			else{
+				if(sResponse) {
+					this.log.logErr(sResponse);
+				}
+				gs.addErrorMessage("Absolute API Error, CDF Lookup Failed: Unknown Error");
+				return "";
+			}
+		}
+		catch(ex) {
+			var temp = ex;
+			return "error";
+		}
+	},
+	
+	//Generates the Complete Auth Header
+	_generateAuthHeader: function (apiToken, apiSecret, abtDT, method, uri, query, body){
+		var abtDate = this._getDate();
+		var abtDateTime = abtDT;
+		var request = this._generateConconicalRequest(method, uri, query, "api.absolute.com", abtDateTime, body);
+		var requestHash = CryptoJS.enc.Hex.stringify(CryptoJS.SHA256(request));
+		var stringToSign = "ABS1-HMAC-SHA-256" + "\n" + abtDateTime + "\n" + abtDate + "/cadc/abs1" + "\n" + requestHash;
+		var signingKey = this._generateSigningKey(apiSecret, abtDate);
+		var signature = CryptoJS.HmacSHA256(stringToSign,signingKey).toString(CryptoJS.enc.Hex);
+		var header = "ABS1-HMAC-SHA-256 Credential=" + apiToken + "/" + abtDate + "/cadc/abs1, SignedHeaders=host;content-type;x-abs-date, Signature=" + signature;
+		
+		return header;
+	},
+	
+	//Gets the Date in the correct format
+	_getDate : function (){
+		var currentDate = new Date();
+		var year = currentDate.getUTCFullYear().toString();
+		var month = ('0' + (currentDate.getUTCMonth()+1)).slice(-2);
+		var day = ('0' + currentDate.getUTCDate()).slice(-2);
+		return year + month + day;
+	},
+	
+	//Get the Time in the Corerct Format
+	_getTime : function (){
+		var currentDate = new Date();
+		//var hours = currentDate.getUTCHours().toString();
+		var hours = ('0' + currentDate.getUTCHours()).slice(-2);
+		var minutes = ('0' + (currentDate.getUTCMinutes()-1)).slice(-2);
+		var seconds = ('0' + currentDate.getUTCSeconds()).slice(-2);
+		return hours + minutes + seconds;
+	},
+	
+	//Get the date and time in the correct format for api requests
+	_getAbtDateTime : function (){
+		return this._getDate() + "T" + this._getTime() + "Z";
+	},
+	
+	//Create a conconical request string and sign it
+	_generateConconicalRequest : function (method, resourse, query, host, abtDateTimeString, body){
+		var request = [];
+		request.push(
+		method.toUpperCase(), "\n",
+		resourse, "\n" ,
+		this._urlEncode(query.replace("?", "")), "\n",
+		"host:" , host , "\n" ,
+		"content-type:application/json", "\n",
+		"x-abs-date:" , abtDateTimeString, "\n",
+		CryptoJS.SHA256(body)
+		);
+		return request.join("");
+	},
+	
+	//Create the signing key
+	_generateSigningKey : function (secretKey, abtDate){
+		var ksecret = CryptoJS.enc.Utf8.parse("ABS1"+secretKey);
+		var kDate = CryptoJS.HmacSHA256(abtDate, ksecret);
+		var signingKey = CryptoJS.HmacSHA256("abs1_request", kDate);
+		return signingKey;
+	},
+	
+	_urlEncode: function (value){
+		
+		enc = value
+		.replace(/\$/g, "%24" )
+		.replace(/\ /g, "%20" )
+		.replace(/\'/g, "%27" )
+		.replace(/\(/g, "%28")
+		.replace(/\)/g, "%29")
+		.replace(/\,/g, "%2C" );
+		
+		return enc;
+	},
+	
+	type: 'AbsoluteAPI'
+};x_absr_itsm]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>matt.wood</sys_created_by>
+        <sys_created_on>2019-01-25 22:23:54</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>f62f8ca0db1be740cb8fd7764896197a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>AbsoluteAPI</sys_name>
+        <sys_package display_value="Absolute ITSM Connector" source="x_absr_itsm">334c86f7dbc7a740cb8fd77648961963</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Absolute ITSM Connector">334c86f7dbc7a740cb8fd77648961963</sys_scope>
+        <sys_update_name>sys_script_include_f62f8ca0db1be740cb8fd7764896197a</sys_update_name>
+        <sys_updated_by>matt.wood</sys_updated_by>
+        <sys_updated_on>2019-01-25 23:53:57</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>refreshdevicedata</action_name>
+        <active>true</active>
+        <client>false</client>
+        <comments/>
+        <condition/>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_style/>
+        <hint/>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <name>Refresh</name>
+        <onclick/>
+        <order>100</order>
+        <script><![CDATA[// Check if refresh happened within last 15 minutes.
+var lastRefreshed = new GlideDateTime(current.sys_updated_on);
+var refreshLimit = new GlideDateTime();
+// Subtract 5 minutes.
+refreshLimit.addSeconds(-300);
+
+if(lastRefreshed > refreshLimit) {
+	gs.addErrorMessage("You cannot refresh device data more often than once every 5 minutes. Last refreshed at " + lastRefreshed.getValue());
+	action.setRedirectURL(current);
+}
+else {
+	// Get data from API.
+	var apiSecret = gs.getProperty('x_absr_itsm.API_Secret');
+	var apiToken = gs.getProperty('x_absr_itsm.API_Token');
+	var api = new AbsoluteAPI(apiToken, apiSecret);
+	var absoluteDevice = api.fetchDeviceBySerial(current.serial);
+	
+	// Make sure absoluteDevice is populated before updating.
+	if(absoluteDevice) {
+		// Set updated values.
+		current.identifier = absoluteDevice.esn;
+		current.id = absoluteDevice.id;
+		current.serial = absoluteDevice.serial;
+		
+		if(absoluteDevice.systemName){
+			current.device_name = absoluteDevice.systemName;
+		}
+		
+		if(absoluteDevice.lastConnectedUtc){
+			// Set last connected date.
+			var lastConnectedDate = new GlideDateTime();
+			lastConnectedDate.subtract(lastConnectedDate.getNumericValue()); //Sets date to 0.
+			lastConnectedDate.add(absoluteDevice.lastConnectedUtc);
+			current.last_connected_utc = lastConnectedDate;
+		}
+		
+		if(absoluteDevice.os && absoluteDevice.os.name){
+			current.os_name = absoluteDevice.os.name;
+		}
+		
+		if(absoluteDevice.username){
+			current.username = absoluteDevice.username;
+		}
+		
+		if(absoluteDevice.avgMinutesInUse) {
+			current.average_daily_usage = Math.floor(absoluteDevice.avgMinutesInUse / 60).toString() + ":" + (absoluteDevice.avgMinutesInUse % 60).toString();
+		}
+		else {
+			current.average_daily_usage = "";
+		}
+		
+		if(absoluteDevice.systemManufacturer){
+			current.make = absoluteDevice.systemManufacturer;
+		}
+		
+		if(absoluteDevice.systemModel){
+			current.model = absoluteDevice.systemModel;
+		}
+		
+		
+		if(absoluteDevice.hdcStatus && absoluteDevice.hdcStatus.calcStatus){
+			current.hardware_status = absoluteDevice.hdcStatus.calcStatus;
+		}
+		if(absoluteDevice.hdcStatus && absoluteDevice.hdcStatus.lastDataReceived) {
+			var lastHardwareUpdated = new GlideDateTime();
+			lastHardwareUpdated.subtract(lastHardwareUpdated.getNumericValue()); //Sets date to 0.
+			lastHardwareUpdated.add(absoluteDevice.hdcStatus.lastDataReceived);
+			current.hardware_last_updated = lastHardwareUpdated;
+		}
+		
+		if(absoluteDevice.sdcStatus && absoluteDevice.sdcStatus.calcStatus){
+			current.software_status = absoluteDevice.sdcStatus.calcStatus;
+		}
+		if(absoluteDevice.sdcStatus && absoluteDevice.sdcStatus.lastDataReceived) {
+			var lastSoftwareUpdated = new GlideDateTime();
+			lastSoftwareUpdated.subtract(lastSoftwareUpdated.getNumericValue()); //Sets date to 0.
+			lastSoftwareUpdated.add(absoluteDevice.sdcStatus.lastDataReceived);
+			current.software_last_updated = lastSoftwareUpdated;
+		}
+		
+		if(absoluteDevice.dlpStatus && absoluteDevice.dlpStatus.calcStatus){
+			current.edd_status = absoluteDevice.dlpStatus.calcStatus;
+		}
+		if(absoluteDevice.dlpStatus && absoluteDevice.dlpStatus.lastDataReceived) {
+			var lastEddUpdated = new GlideDateTime();
+			lastEddUpdated.subtract(lastEddUpdated.getNumericValue()); //Sets date to 0.
+			lastEddUpdated.add(absoluteDevice.dlpStatus.lastDataReceived);
+			current.edd_last_updated = lastEddUpdated;
+		}
+		
+		if(absoluteDevice.classification) {
+			current.usage_classification = absoluteDevice.classification;
+		}
+		
+		if(absoluteDevice.localIp) {
+			current.local_ip = absoluteDevice.localIp;
+		}
+		
+		if(absoluteDevice.publicIp) {
+			current.public_ip = absoluteDevice.publicIp;
+		}
+		
+		if(absoluteDevice.timeZone) {
+			current.timezone = absoluteDevice.timeZone;
+		}
+		
+		if(absoluteDevice.firstCallUtc) {
+			var activationDate = new GlideDateTime();
+			activationDate.subtract(activationDate.getNumericValue()); //Sets date to 0.
+			activationDate.add(absoluteDevice.firstCallUtc);
+			current.activation_date = activationDate;
+		}
+		
+		if(absoluteDevice.totalPhysicalRamBytes) {
+			current.memory_total = (absoluteDevice.totalPhysicalRamBytes / 1000000000).toFixed(2).toString() + " GB";
+		}
+		
+		if(absoluteDevice.availablePhysicalRamBytes) {
+			current.memory_available = (absoluteDevice.availablePhysicalRamBytes / 1000000000).toFixed(2).toString() + " GB";
+		}
+		
+		if(absoluteDevice.volumes) {
+			for(var i = 0; i < absoluteDevice.volumes.length; i++) {
+				var volume = absoluteDevice.volumes[i];
+				if(volume.boot) {
+					current.boot_drive_available_space = (volume.freeSpaceBytes / 1000000000).toFixed(2).toString() + " GB";
+					
+					break;
+				}
+			}
+		}
+		
+		if(absoluteDevice.os) {
+			if(absoluteDevice.os.version) {
+				current.os_version = absoluteDevice.os.version;
+			}
+			if(absoluteDevice.os.build) {
+				current.os_build = absoluteDevice.os.build;
+			}
+			if(absoluteDevice.os.architecture) {
+				current.os_architecture = absoluteDevice.os.architecture;
+			}
+			if(absoluteDevice.os.csdVersion) {
+				current.os_csd_version = absoluteDevice.os.csdVersion;
+			}
+			if(absoluteDevice.os.installDate) {
+				var installDate = new GlideDateTime();
+				installDate.subtract(installDate.getNumericValue());
+				installDate.add(absoluteDevice.os.installDate);
+				current.os_install_date = installDate;
+			}
+			if(absoluteDevice.os.lastBootTime) {
+				var lastBootTime = new GlideDateTime();
+				lastBootTime.subtract(lastBootTime.getNumericValue());
+				lastBootTime.add(absoluteDevice.os.lastBootTime);
+				current.os_last_boot_time = lastBootTime;
+			}
+			if(absoluteDevice.os.productKey) {
+				current.os_product_key = absoluteDevice.os.productKey;
+			}
+		}
+		
+		if(absoluteDevice.cpu) {
+			if(absoluteDevice.cpu.name) {
+				current.cpu_name = absoluteDevice.cpu.name;
+			}
+			if(absoluteDevice.cpu.processorSpeed) {
+				var processorSpeed = (absoluteDevice.cpu.processorSpeed / 1000).toFixed(2).toString() + " GHz";
+				current.cpu_processor_speed = processorSpeed;
+			}
+			if(absoluteDevice.cpu.physicalCores) {
+				current.cpu_physical_cores = absoluteDevice.cpu.physicalCores;
+			}
+			if(absoluteDevice.cpu.logicalCores) {
+				current.cpu_logical_cores = absoluteDevice.cpu.logicalCores;
+			}
+		}
+		
+		if(absoluteDevice.bios) {
+			if(absoluteDevice.bios.version) {
+				current.bios_version = absoluteDevice.bios.version;
+			}
+			if(absoluteDevice.bios.versionDate) {
+				current.bios_version_date = absoluteDevice.bios.versionDate;
+			}
+			if(absoluteDevice.bios.smBiosVersion) {
+				current.bios_smbios_version = absoluteDevice.bios.smBiosVersion;
+			}
+			
+			if(absoluteDevice.bios.releaseDate) {
+				var releaseDate = new GlideDateTime();
+				releaseDate.subtract(releaseDate.getNumericValue());
+				releaseDate.add(absoluteDevice.bios.releaseDate);
+				current.bios_release_date = releaseDate;
+			}
+		}
+		
+		if(absoluteDevice.policyGroupUid) {
+			current.policy_group_uid = absoluteDevice.policyGroupUid;
+		}
+		
+		if(absoluteDevice.policyGroupName) {
+			current.policy_group_name = absoluteDevice.policyGroupName;
+		}
+		
+		if(absoluteDevice.pageFileSpaceBytes) {
+			current.pagefile_size = (absoluteDevice.pageFileSpaceBytes / 1000000000).toFixed(2).toString() + " GB";
+		}
+		
+		if(absoluteDevice.domain) {
+			current.domain = absoluteDevice.domain;
+		}
+		
+		if(absoluteDevice.avpInfo) {
+			if(absoluteDevice.avpInfo.antivirusName) {
+				current.antivirus_name = absoluteDevice.avpInfo.antivirusName;
+			}
+			
+			if(absoluteDevice.avpInfo.antivirusVersion) {
+				current.antivirus_version = absoluteDevice.avpInfo.antivirusVersion;
+			}
+			
+			if(absoluteDevice.avpInfo.antivirusDefinition) {
+				current.antivirus_definition = absoluteDevice.avpInfo.antivirusDefinition;
+			}
+			
+			if(absoluteDevice.avpInfo.antivirusDefinitionDate) {
+				var antivirusDefinitionDate = new GlideDateTime();
+				antivirusDefinitionDate.subtract(antivirusDefinitionDate.getNumericValue());
+				antivirusDefinitionDate.add(absoluteDevice.avpInfo.antivirusDefinitionDate);				
+				current.antivirus_definition_date = antivirusDefinitionDate;
+			}
+			
+			if(absoluteDevice.avpInfo.antivirusDataReceivedUtc) {
+				var antivirusDataReceivedUtc = new GlideDateTime();
+				antivirusDataReceivedUtc.subtract(antivirusDataReceivedUtc.getNumericValue());
+				antivirusDataReceivedUtc.add(absoluteDevice.avpInfo.antivirusDataReceivedUtc);		
+				current.antivirus_data_received_utc = antivirusDefinitionDate;
+			}
+		}
+		
+		if(absoluteDevice.espInfo) {
+			if(absoluteDevice.espInfo.encryptionProductName) {
+				current.encryption_name = absoluteDevice.espInfo.encryptionProductName;
+			}
+			
+			if(absoluteDevice.espInfo.encryptionVersion) {
+				current.encryption_version = absoluteDevice.espInfo.encryptionVersion;
+			}
+			
+			if(absoluteDevice.espInfo.encryptionAlgorithm) {
+				current.encryption_algorithm = absoluteDevice.espInfo.encryptionAlgorithm;
+			}
+			
+			if(absoluteDevice.espInfo.encryptionStatusDescription) {
+				current.encryption_status_description = absoluteDevice.espInfo.encryptionStatusDescription;
+			}
+			
+			if(absoluteDevice.espInfo.encryptionKeySize) {
+				current.encryption_key_size = absoluteDevice.espInfo.encryptionKeySize;
+			}
+			
+			if(absoluteDevice.espInfo.hardwareEncryption) {
+				current.encryption_hardware_encryption = absoluteDevice.espInfo.hardwareEncryption;
+			}
+			
+			if(absoluteDevice.espInfo.lastEncryptionDataReceivedUtc) {
+				var lastEncryptionDataReceivedUtc = new GlideDateTime();
+				lastEncryptionDataReceivedUtc.subtract(lastEncryptionDataReceivedUtc.getNumericValue());
+				lastEncryptionDataReceivedUtc.add(absoluteDevice.espInfo.lastEncryptionDataReceivedUtc);	
+				current.encryption_data_received_utc = lastEncryptionDataReceivedUtc;
+			}
+			
+			if(absoluteDevice.espInfo.encryptionStatus) {
+				current.encryption_status = absoluteDevice.espInfo.encryptionStatus;
+			}
+		}
+		
+		// Set raw data based on API response.
+		current.device_data_raw = new global.JSON().encode(absoluteDevice);
+		
+		// Update and redirect.
+		current.sys_updated_on = new GlideDateTime().getDisplayValue();
+		current.update();
+		
+		
+		var upsertCdfs = new UpsertCdfs();
+		upsertCdfs.update(current.id,current.sys_id);
+		
+		
+		action.setRedirectURL(current);
+	}
+	// We failed to get the latest device data, so display error.
+	else {
+		action.setRedirectURL(current);
+	}
+}]]></script>
+        <show_insert>false</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>matt.wood</sys_created_by>
+        <sys_created_on>2019-01-25 22:28:36</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4c00d0e0db1be740cb8fd7764896194c</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Refresh</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Absolute ITSM Connector" source="x_absr_itsm">334c86f7dbc7a740cb8fd77648961963</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Absolute ITSM Connector">334c86f7dbc7a740cb8fd77648961963</sys_scope>
+        <sys_update_name>sys_ui_action_4c00d0e0db1be740cb8fd7764896194c</sys_update_name>
+        <sys_updated_by>matt.wood</sys_updated_by>
+        <sys_updated_on>2019-01-26 00:19:34</sys_updated_on>
+        <table>x_absr_itsm_device</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>
