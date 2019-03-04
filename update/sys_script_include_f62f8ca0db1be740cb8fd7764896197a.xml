@@ -15,6 +15,12 @@ AbsoluteAPI.prototype = {
 		this.log = new global.GSLog("x_absr_itsm.logging.verbosity", "AbsoluteAPI");
 	},
 	fetchAbsoluteUid : function (serialNumber){
+		if(!serialNumber || serialNumber.length === 0) {
+			gs.addErrorMessage("Serial number cannot be blank");			
+			this.log.logErr("Serial number cannot be blank when creating Absolute device records");
+			return "";
+		}
+		
 		// Use that serial Number to go and get the Uid from Absolute servers
 		try {
 			var query = "$filter=agentStatus eq 'A' and substringof(Serial, '" + serialNumber + "')&$orderby=firstCallUtc desc&$select=id";
@@ -29,10 +35,10 @@ AbsoluteAPI.prototype = {
 			var response = r.execute();
 			var httpStatus = response.getStatusCode();
 			var sResponse = response.getBody(); //get response as string
-						
+			
 			if(httpStatus == "200"){
 				if(sResponse) {
-					this.log.logDebug(sResponse);	
+					this.log.logDebug(sResponse);
 				}
 				
 				//We got a good response from the API
@@ -86,6 +92,12 @@ AbsoluteAPI.prototype = {
 	},
 	
 	fetchDeviceBySerial : function (serialNumber){
+		if(!serialNumber || serialNumber.length === 0) {
+			gs.addErrorMessage("Serial number cannot be blank");			
+			this.log.logErr("Serial number cannot be blank when creating Absolute device records");
+			return "";
+		}
+		
 		try {
 			var id = this.fetchAbsoluteUid(serialNumber);
 			
@@ -105,10 +117,10 @@ AbsoluteAPI.prototype = {
 			var response = r.execute();
 			var httpStatus = response.getStatusCode();
 			var sResponse = response.getBody(); //get response as string
-						
+			
 			if(httpStatus == "200"){
 				if(sResponse) {
-					this.log.logDebug(sResponse);	
+					this.log.logDebug(sResponse);
 				}
 				
 				//We got a good response from the API
@@ -159,6 +171,12 @@ AbsoluteAPI.prototype = {
 	},
 	
 	fetchCdfsBySerial : function (serialNumber){
+		if(!serialNumber || serialNumber.length === 0) {
+			gs.addErrorMessage("Serial number cannot be blank");			
+			this.log.logErr("Serial number cannot be blank when fetching Absolute CDF records");
+			return "";
+		}
+		
 		try {
 			var id = this.fetchAbsoluteUid(serialNumber);
 			
@@ -177,10 +195,10 @@ AbsoluteAPI.prototype = {
 			var response = r.execute();
 			var httpStatus = response.getStatusCode();
 			var sResponse = response.getBody(); //get response as string
-						
+			
 			if(httpStatus == "200"){
 				if(sResponse) {
-					this.log.logDebug(sResponse);	
+					this.log.logDebug(sResponse);
 				}
 				var jResponse = global.JSON.parse(sResponse); //Convert response to Json Object
 				return jResponse;
@@ -196,7 +214,7 @@ AbsoluteAPI.prototype = {
 				}
 				else{
 					if(sResponse) {
-					this.log.logErr(sResponse);
+						this.log.logErr(sResponse);
 					}
 					gs.addErrorMessage("Absolute API Error, CDF Lookup Failed: Unknown Error");
 					return "";
@@ -304,7 +322,7 @@ AbsoluteAPI.prototype = {
         <sys_created_on>2019-01-25 22:23:54</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f62f8ca0db1be740cb8fd7764896197a</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>AbsoluteAPI</sys_name>
         <sys_package display_value="Absolute ITSM Connector" source="x_absr_itsm">334c86f7dbc7a740cb8fd77648961963</sys_package>
         <sys_policy>read</sys_policy>
@@ -312,6 +330,6 @@ AbsoluteAPI.prototype = {
         <sys_scope display_value="Absolute ITSM Connector">334c86f7dbc7a740cb8fd77648961963</sys_scope>
         <sys_update_name>sys_script_include_f62f8ca0db1be740cb8fd7764896197a</sys_update_name>
         <sys_updated_by>matt.wood</sys_updated_by>
-        <sys_updated_on>2019-01-25 23:53:57</sys_updated_on>
+        <sys_updated_on>2019-03-04 21:54:36</sys_updated_on>
     </sys_script_include>
 </record_update>
