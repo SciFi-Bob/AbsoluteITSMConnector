@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update>
+<?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_ui_section caption="CPU" section_id="a51a9308db13e740cb8fd77648961901" sys_domain="global" table="x_absr_itsm_device" version="3" view="">
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>cpu_name</element>

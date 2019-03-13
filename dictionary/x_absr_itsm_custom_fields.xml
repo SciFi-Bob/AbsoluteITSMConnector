@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<database>
+<?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Custom Fields" max_length="40" name="x_absr_itsm_custom_fields" type="collection">
         <element label="device" mandatory="true" max_length="32" name="device" read_only="true" reference="x_absr_itsm_device" type="reference"/>
         <element label="Id" max_length="40" name="id" read_only="true" type="string"/>

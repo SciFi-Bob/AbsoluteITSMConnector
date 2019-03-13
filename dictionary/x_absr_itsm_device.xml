@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<database>
+<?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Device" max_length="40" name="x_absr_itsm_device" type="collection">
-        <element label="Antivirus Data Received UTC" max_length="40" name="antivirus_data_received_utc" read_only="true" type="glide_date_time"/>
+        <element label="Antivirus Data Received" max_length="40" name="antivirus_data_received_utc" read_only="true" type="glide_date_time"/>
         <element label="Antivirus Definition" max_length="40" name="antivirus_definition" read_only="true" type="string"/>
         <element label="Antivirus Definition Date" max_length="40" name="antivirus_definition_date" read_only="true" type="glide_date_time"/>
         <element label="Antivirus Name" max_length="40" name="antivirus_name" read_only="true" type="string"/>
@@ -23,7 +22,7 @@
         <element label="EDD Last Updated" max_length="40" name="edd_last_updated" read_only="true" type="glide_date_time"/>
         <element label="EDD Status" max_length="40" name="edd_status" read_only="true" type="string"/>
         <element label="Encryption Algorithm" max_length="40" name="encryption_algorithm" read_only="true" type="string"/>
-        <element label="Encryption Data Received UTC" max_length="40" name="encryption_data_received_utc" read_only="true" type="glide_date_time"/>
+        <element label="Encryption Data Received" max_length="40" name="encryption_data_received_utc" read_only="true" type="glide_date_time"/>
         <element label="Encryption Hardware Encryption" max_length="40" name="encryption_hardware_encryption" read_only="true" type="boolean"/>
         <element label="Encryption Key Size" max_length="40" name="encryption_key_size" read_only="true" type="string"/>
         <element label="Encryption Name" max_length="40" name="encryption_name" read_only="true" type="string"/>
@@ -35,7 +34,7 @@
         <element label="Hardware Status" max_length="40" name="hardware_status" read_only="true" type="string"/>
         <element label="ID" max_length="40" name="id" read_only="true" type="string"/>
         <element label="Identifier" max_length="40" name="identifier" read_only="true" type="string"/>
-        <element label="Last Connected UTC" max_length="40" name="last_connected_utc" read_only="true" type="glide_date_time"/>
+        <element label="Last Connected" max_length="40" name="last_connected_utc" read_only="true" type="glide_date_time"/>
         <element label="Local IP" max_length="40" name="local_ip" read_only="true" type="string"/>
         <element label="Make" max_length="40" name="make" read_only="true" type="string"/>
         <element label="Memory Available" max_length="40" name="memory_available" read_only="true" type="string"/>
