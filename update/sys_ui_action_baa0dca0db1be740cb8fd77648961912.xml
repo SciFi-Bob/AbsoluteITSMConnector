@@ -268,7 +268,7 @@ else {
 				var antivirusDataReceivedUtc = new GlideDateTime();
 				antivirusDataReceivedUtc.subtract(antivirusDataReceivedUtc.getNumericValue());
 				antivirusDataReceivedUtc.add(absoluteDevice.avpInfo.antivirusDataReceivedUtc);		
-				device.antivirus_data_received_utc = antivirusDefinitionDate;
+				device.antivirus_data_received_utc = antivirusDataReceivedUtc;
 			}
 		}
 		
@@ -336,7 +336,7 @@ else {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>baa0dca0db1be740cb8fd77648961912</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>View Absolute Device</sys_name>
         <sys_overrides/>
         <sys_package display_value="Absolute ITSM Connector" source="x_absr_itsm">334c86f7dbc7a740cb8fd77648961963</sys_package>
@@ -345,7 +345,7 @@ else {
         <sys_scope display_value="Absolute ITSM Connector">334c86f7dbc7a740cb8fd77648961963</sys_scope>
         <sys_update_name>sys_ui_action_baa0dca0db1be740cb8fd77648961912</sys_update_name>
         <sys_updated_by>matt.wood</sys_updated_by>
-        <sys_updated_on>2019-01-29 20:46:41</sys_updated_on>
+        <sys_updated_on>2019-03-13 23:25:57</sys_updated_on>
         <table>cmdb_ci_computer</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
