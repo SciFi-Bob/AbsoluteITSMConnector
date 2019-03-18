@@ -10,7 +10,7 @@
         <element label="BIOS SMBIOS Version" max_length="40" name="bios_smbios_version" read_only="true" type="string"/>
         <element label="BIOS Version" max_length="40" name="bios_version" read_only="true" type="string"/>
         <element label="BIOS Version Date" max_length="40" name="bios_version_date" read_only="true" type="string"/>
-        <element label="Boot Drive Available Space" max_length="40" name="boot_drive_available_space" read_only="true" type="string"/>
+        <element label="Hard Drive Free Space" max_length="40" name="boot_drive_available_space" read_only="true" type="string"/>
         <element display="true" label="Computer" mandatory="true" max_length="32" name="computer" read_only="true" reference="cmdb_ci_computer" type="reference"/>
         <element label="CPU Logical Cores" max_length="40" name="cpu_logical_cores" read_only="true" type="string"/>
         <element label="CPU Name" max_length="40" name="cpu_name" read_only="true" type="string"/>
@@ -35,10 +35,10 @@
         <element label="ID" max_length="40" name="id" read_only="true" type="string"/>
         <element label="Identifier" max_length="40" name="identifier" read_only="true" type="string"/>
         <element label="Last Connected" max_length="40" name="last_connected_utc" read_only="true" type="glide_date_time"/>
-        <element label="Local IP" max_length="40" name="local_ip" read_only="true" type="string"/>
+        <element label="Local IP Address" max_length="40" name="local_ip" read_only="true" type="string"/>
         <element label="Make" max_length="40" name="make" read_only="true" type="string"/>
-        <element label="Memory Available" max_length="40" name="memory_available" read_only="true" type="string"/>
-        <element label="Memory Total" max_length="40" name="memory_total" read_only="true" type="string"/>
+        <element label="Available Physical Memory" max_length="40" name="memory_available" read_only="true" type="string"/>
+        <element label="Total Physical Memory" max_length="40" name="memory_total" read_only="true" type="string"/>
         <element label="Model" max_length="40" name="model" read_only="true" type="string"/>
         <element label="OS Architecture" max_length="40" name="os_architecture" read_only="true" type="string"/>
         <element label="OS Build" max_length="40" name="os_build" read_only="true" type="string"/>
@@ -48,10 +48,10 @@
         <element label="OS Name" max_length="40" name="os_name" read_only="true" type="string"/>
         <element label="OS Product Key" max_length="40" name="os_product_key" read_only="true" type="string"/>
         <element label="OS Version" max_length="40" name="os_version" read_only="true" type="string"/>
-        <element label="Pagefile Size" max_length="40" name="pagefile_size" read_only="true" type="string"/>
+        <element label="Page File Space" max_length="40" name="pagefile_size" read_only="true" type="string"/>
         <element label="Policy Group Name" max_length="40" name="policy_group_name" read_only="true" type="string"/>
         <element label="Policy Group Uid" max_length="40" name="policy_group_uid" read_only="true" type="string"/>
-        <element label="Public IP" max_length="40" name="public_ip" read_only="true" type="string"/>
+        <element label="Public IP Address" max_length="40" name="public_ip" read_only="true" type="string"/>
         <element label="Serial" max_length="40" name="serial" read_only="true" type="string"/>
         <element label="Software Last Updated" max_length="40" name="software_last_updated" read_only="true" type="glide_date_time"/>
         <element label="Software Status" max_length="40" name="software_status" read_only="true" type="string"/>
