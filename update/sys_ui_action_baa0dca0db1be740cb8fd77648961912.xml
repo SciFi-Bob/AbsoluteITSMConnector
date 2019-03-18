@@ -30,6 +30,15 @@
 device.addQuery('serial',current.serial_number);
 device.query();
 
+var formatBytes = function(e, t) {
+	if (e === 0)
+		return "0 Byte";
+	var n = 1024,
+	r = ["Bytes", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"],
+	i = Math.floor(Math.log(e) / Math.log(n));
+	return Number((e / Math.pow(n, i)).toFixed(t)) + " " + r[i];
+};
+
 if(device.next()) {
 	// We will navigate to the existing record.
 	
@@ -145,11 +154,11 @@ else {
 		}
 		
 		if(absoluteDevice.totalPhysicalRamBytes) {
-			device.memory_total = (absoluteDevice.totalPhysicalRamBytes / 1073741824).toFixed(2).toString() + " GB";
+			device.memory_total = formatBytes(absoluteDevice.totalPhysicalRamBytes,2);
 		}
 		
 		if(absoluteDevice.availablePhysicalRamBytes) {
-			device.memory_available = (absoluteDevice.availablePhysicalRamBytes / 1073741824).toFixed(2).toString() + " GB";
+			device.memory_available = formatBytes(absoluteDevice.availablePhysicalRamBytes, 2);
 		}
 		
 		if(absoluteDevice.volumes) {
@@ -157,12 +166,10 @@ else {
 			for(var i = 0; i < absoluteDevice.volumes.length; i++) {
 				var volume = absoluteDevice.volumes[i];
 				if(volume.freeSpaceBytes) {
-					space += (volume.freeSpaceBytes / 1073741824);
-					
-					break;
+					space += volume.freeSpaceBytes;					
 				}
 			}
-			device.boot_drive_available_space = space.toFixed(2).toString() + " GB";
+			device.boot_drive_available_space = formatBytes(space, 2);
 		}
 		
 		if(absoluteDevice.os) {
@@ -239,7 +246,7 @@ else {
 		}
 		
 		if(absoluteDevice.pageFileSpaceBytes) {
-			device.pagefile_size = (absoluteDevice.pageFileSpaceBytes / 1073741824).toFixed(2).toString() + " GB";
+			device.pagefile_size = formatBytes(absoluteDevice.pageFileSpaceBytes, 2);
 		}
 		
 		if(absoluteDevice.domain) {
@@ -262,14 +269,14 @@ else {
 			if(absoluteDevice.avpInfo.antivirusDefinitionDate) {
 				var antivirusDefinitionDate = new GlideDateTime();
 				antivirusDefinitionDate.subtract(antivirusDefinitionDate.getNumericValue());
-				antivirusDefinitionDate.add(absoluteDevice.avpInfo.antivirusDefinitionDate);				
+				antivirusDefinitionDate.add(absoluteDevice.avpInfo.antivirusDefinitionDate);
 				device.antivirus_definition_date = antivirusDefinitionDate;
 			}
 			
 			if(absoluteDevice.avpInfo.antivirusDataReceivedUtc) {
 				var antivirusDataReceivedUtc = new GlideDateTime();
 				antivirusDataReceivedUtc.subtract(antivirusDataReceivedUtc.getNumericValue());
-				antivirusDataReceivedUtc.add(absoluteDevice.avpInfo.antivirusDataReceivedUtc);		
+				antivirusDataReceivedUtc.add(absoluteDevice.avpInfo.antivirusDataReceivedUtc);
 				device.antivirus_data_received_utc = antivirusDataReceivedUtc;
 			}
 		}
@@ -302,7 +309,7 @@ else {
 			if(absoluteDevice.espInfo.lastEncryptionDataReceivedUtc) {
 				var lastEncryptionDataReceivedUtc = new GlideDateTime();
 				lastEncryptionDataReceivedUtc.subtract(lastEncryptionDataReceivedUtc.getNumericValue());
-				lastEncryptionDataReceivedUtc.add(absoluteDevice.espInfo.lastEncryptionDataReceivedUtc);	
+				lastEncryptionDataReceivedUtc.add(absoluteDevice.espInfo.lastEncryptionDataReceivedUtc);
 				device.encryption_data_received_utc = lastEncryptionDataReceivedUtc;
 			}
 			
@@ -338,7 +345,7 @@ else {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>baa0dca0db1be740cb8fd77648961912</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name>View Absolute Device</sys_name>
         <sys_overrides/>
         <sys_package display_value="Absolute ITSM Connector" source="x_absr_itsm">334c86f7dbc7a740cb8fd77648961963</sys_package>
@@ -347,7 +354,7 @@ else {
         <sys_scope display_value="Absolute ITSM Connector">334c86f7dbc7a740cb8fd77648961963</sys_scope>
         <sys_update_name>sys_ui_action_baa0dca0db1be740cb8fd77648961912</sys_update_name>
         <sys_updated_by>matt.wood</sys_updated_by>
-        <sys_updated_on>2019-03-18 20:08:27</sys_updated_on>
+        <sys_updated_on>2019-03-18 20:49:13</sys_updated_on>
         <table>cmdb_ci_computer</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
