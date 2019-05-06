@@ -7,7 +7,7 @@
         <licensable>true</licensable>
         <license_category>none</license_category>
         <license_model>none</license_model>
-        <logo/>
+        <logo>7e901d04db913780bbb11649489619f6</logo>
         <menu/>
         <name>Absolute ITSM Connector</name>
         <private>false</private>
@@ -17,16 +17,16 @@
         <scoped_administration>false</scoped_administration>
         <short_description/>
         <source>x_absr_itsm</source>
-        <store_correlation_id/>
-        <store_url/>
+        <store_correlation_id>APP0012109</store_correlation_id>
+        <store_url>https://tpp.servicenow.com/sn_appstore_s</store_url>
         <sys_class_name>sys_app</sys_class_name>
         <sys_code/>
         <sys_created_by>matt.wood</sys_created_by>
         <sys_created_on>2019-01-23 23:34:45</sys_created_on>
         <sys_id>334c86f7dbc7a740cb8fd77648961963</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>matt.wood</sys_updated_by>
-        <sys_updated_on>2019-01-23 23:34:45</sys_updated_on>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-05-03 23:57:57</sys_updated_on>
         <template/>
         <trackable>true</trackable>
         <user_role/>
@@ -34,4 +34,42 @@
         <vendor_prefix/>
         <version>1.0.0</version>
     </sys_app>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color>#231f20</average_image_color>
+        <chunk_size_bytes>734003</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/png</content_type>
+        <file_name>logo</file_name>
+        <image_height>225</image_height>
+        <image_width>225</image_width>
+        <size_bytes>1966</size_bytes>
+        <size_compressed>1978</size_compressed>
+        <state>available</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-05-03 23:57:57</sys_created_on>
+        <sys_id>7e901d04db913780bbb11649489619f6</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>guest</sys_updated_by>
+        <sys_updated_on>2019-05-03 23:57:58</sys_updated_on>
+        <table_name>ZZ_YYsys_app</table_name>
+        <table_sys_id>334c86f7dbc7a740cb8fd77648961963</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAA==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="logo" sys_id="7e901d04db913780bbb11649489619f6">7e901d04db913780bbb11649489619f6</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-05-03 23:57:57</sys_created_on>
+        <sys_id>be901d04db913780bbb11649489619f6</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>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</data>
+        <length>2624</length>
+        <position>1</position>
+        <sys_attachment display_value="logo" sys_id="7e901d04db913780bbb11649489619f6">7e901d04db913780bbb11649489619f6</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-05-03 23:57:57</sys_created_on>
+        <sys_id>32901d04db913780bbb11649489619f7</sys_id>
+    </sys_attachment_doc>
 </record_update>
