@@ -12,21 +12,22 @@
                 xmlns:j2="null"
                 xmlns:g2="null">
                 <div class="container">
-                                <h1>
-                                                <strong>ServiceNow - Works for you.</strong>
-                                </h1>
+					<img src="https://www.absolute.com/images/absolutelogo.svg" alt="Absolute Logo" height="100" width="220"></img>
+                                <h2>
+                                                <strong>Absolute - The Evolution of Endpoint Security</strong>
+                                </h2>
                                 <br/>
                                 <div class="container">
                                                 <table class="table-sm table-responsive borderless">
                                                                 <tr>
                                                                                 <td>
-                                                                                                <h2>Contact Us:</h2>
+                                                                                                <h3>Contact Us:</h3>
                                                                                 </td>
                                                                 </tr>
                                                                 <tr>
                                                                                 <td>
                                                                                                 <h3>
-                                                                                                                <a rel="noopener noreferrer nofollow" href="https://www.servicenow.com/support/contact-support.html" target="_blank">https://www.servicenow.com/support/contact-support.html</a>
+                                                                                                                <a rel="noopener noreferrer nofollow" href="https://www.absolute.com/support/servicenow" target="_blank">https://www.absolute.com/support/servicenow</a>
                                                                                                 </h3>
                                                                                 </td>
                                                                 </tr>
@@ -42,7 +43,7 @@
         <sys_created_on>2019-09-04 16:11:45</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>b0fa86b3dba7fb0048bbca7e3b961966</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>Support</sys_name>
         <sys_package display_value="Absolute ITSM Connector" source="x_absr_itsm">334c86f7dbc7a740cb8fd77648961963</sys_package>
         <sys_policy>read</sys_policy>
@@ -50,6 +51,6 @@
         <sys_scope display_value="Absolute ITSM Connector">334c86f7dbc7a740cb8fd77648961963</sys_scope>
         <sys_update_name>sys_ui_page_b0fa86b3dba7fb0048bbca7e3b961966</sys_update_name>
         <sys_updated_by>matt.wood</sys_updated_by>
-        <sys_updated_on>2019-09-04 16:19:08</sys_updated_on>
+        <sys_updated_on>2019-09-04 16:29:04</sys_updated_on>
     </sys_ui_page>
 </record_update>
