@@ -16,7 +16,7 @@
         <name/>
         <order/>
         <override_menu_roles>false</override_menu_roles>
-        <query>https://www.absolute.com/support/servicenow</query>
+        <query>x_absr_itsm_Support.do</query>
         <report/>
         <roles>x_absr_itsm.custom_fields_user,x_absr_itsm.device_user</roles>
         <survey/>
@@ -28,7 +28,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>489fa394dbd7e740cb8fd7764896196e</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Contact Support</sys_name>
         <sys_overrides/>
         <sys_package display_value="Absolute ITSM Connector" source="x_absr_itsm">334c86f7dbc7a740cb8fd77648961963</sys_package>
@@ -37,11 +37,11 @@
         <sys_scope display_value="Absolute ITSM Connector">334c86f7dbc7a740cb8fd77648961963</sys_scope>
         <sys_update_name>sys_app_module_489fa394dbd7e740cb8fd7764896196e</sys_update_name>
         <sys_updated_by>matt.wood</sys_updated_by>
-        <sys_updated_on>2019-01-25 20:06:27</sys_updated_on>
+        <sys_updated_on>2019-09-04 16:19:24</sys_updated_on>
         <timeline_page/>
         <title>Contact Support</title>
         <uncancelable>false</uncancelable>
         <view_name/>
-        <window_name>_blank</window_name>
+        <window_name/>
     </sys_app_module>
 </record_update>
