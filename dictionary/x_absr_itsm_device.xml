@@ -27,7 +27,7 @@
         <element label="Encryption Key Size" max_length="40" name="encryption_key_size" read_only="true" type="string"/>
         <element label="Encryption Name" max_length="40" name="encryption_name" read_only="true" type="string"/>
         <element label="Encryption Status" max_length="40" name="encryption_status" read_only="true" type="string"/>
-        <element label="Encryption Status Description" max_length="40" name="encryption_status_description" read_only="true" type="string"/>
+        <element label="Encryption Status Description" max_length="4000" name="encryption_status_description" read_only="true" type="string"/>
         <element label="Encryption Version" max_length="40" name="encryption_version" read_only="true" type="string"/>
         <element label="Enrolled Date" max_length="40" name="enrolled_date" read_only="true" type="glide_date_time"/>
         <element label="Hardware Last Updated" max_length="40" name="hardware_last_updated" read_only="true" type="glide_date_time"/>
