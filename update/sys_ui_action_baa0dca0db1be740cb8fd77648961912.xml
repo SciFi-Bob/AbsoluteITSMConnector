@@ -85,10 +85,10 @@ else {
 		}
 		
 		if(absoluteDevice.avgMinutesInUse) {
-			device.average_daily_usage = Math.floor(absoluteDevice.avgMinutesInUse / 60).toString() + ":" + (absoluteDevice.avgMinutesInUse % 60).toString();
+			device.average_daily_usage_hours_minutes = Math.floor(absoluteDevice.avgMinutesInUse / 60).toString() + ":" + (absoluteDevice.avgMinutesInUse % 60).toString();
 		}
 		else {
-			device.average_daily_usage = "";
+			device.average_daily_usage_hours_minutes = "";
 		}
 		
 		if(absoluteDevice.systemManufacturer){
@@ -150,7 +150,7 @@ else {
 			var activationDate = new GlideDateTime();
 			activationDate.subtract(activationDate.getNumericValue()); //Sets date to 0.
 			activationDate.add(absoluteDevice.firstCallUtc);
-			device.activation_date = activationDate;
+			device.enrolled_date = activationDate;
 		}
 		
 		if(absoluteDevice.totalPhysicalRamBytes) {
@@ -345,7 +345,7 @@ else {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>baa0dca0db1be740cb8fd77648961912</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name>View Absolute Device</sys_name>
         <sys_overrides/>
         <sys_package display_value="Absolute ITSM Connector" source="x_absr_itsm">334c86f7dbc7a740cb8fd77648961963</sys_package>
@@ -354,7 +354,7 @@ else {
         <sys_scope display_value="Absolute ITSM Connector">334c86f7dbc7a740cb8fd77648961963</sys_scope>
         <sys_update_name>sys_ui_action_baa0dca0db1be740cb8fd77648961912</sys_update_name>
         <sys_updated_by>matt.wood</sys_updated_by>
-        <sys_updated_on>2019-03-18 20:49:13</sys_updated_on>
+        <sys_updated_on>2019-09-05 16:07:37</sys_updated_on>
         <table>cmdb_ci_computer</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
