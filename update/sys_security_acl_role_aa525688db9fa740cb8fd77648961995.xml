@@ -3,13 +3,11 @@
         <sys_class_name>sys_security_acl_role</sys_class_name>
         <sys_created_by>matt.wood</sys_created_by>
         <sys_created_on>2019-01-24 18:39:38</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>aa525688db9fa740cb8fd77648961995</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>x_absr_itsm_custom_fields.x_absr_itsm.custom_fields_user</sys_name>
         <sys_package display_value="Absolute ITSM Connector" source="x_absr_itsm">334c86f7dbc7a740cb8fd77648961963</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Absolute ITSM Connector">334c86f7dbc7a740cb8fd77648961963</sys_scope>
         <sys_security_acl display_value="x_absr_itsm_custom_fields">a2525688db9fa740cb8fd77648961993</sys_security_acl>
         <sys_update_name>sys_security_acl_role_aa525688db9fa740cb8fd77648961995</sys_update_name>

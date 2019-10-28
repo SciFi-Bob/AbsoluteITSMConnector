@@ -153,8 +153,18 @@ else {
 			device.enrolled_date = activationDate;
 		}
 		
-		if(absoluteDevice.totalPhysicalRamBytes) {
+		//Adds up the memory size based on installed memory modules.  Fails back to detected RAM if modules not detected
+		if(absoluteDevice.memories.length > 0){
+			var totalRamBytesFromDimms = parseInt("0");
+			for(var dimm=0; dimm<absoluteDevice.memories.length; dimm++){
+				totalRamBytesFromDimms = totalRamBytesFromDimms + parseInt(absoluteDevice.memories[dimm].sizeBytes);
+			}
+			device.memory_total = formatBytes(totalRamBytesFromDimms,0);
+		}
+		else{
+			if(absoluteDevice.totalPhysicalRamBytes) {
 			device.memory_total = formatBytes(absoluteDevice.totalPhysicalRamBytes,2);
+			}
 		}
 		
 		if(absoluteDevice.availablePhysicalRamBytes) {
@@ -178,6 +188,18 @@ else {
 			}
 			if(absoluteDevice.os.build) {
 				device.os_build = absoluteDevice.os.build;
+			}
+			if(absoluteDevice.os.releaseId) {
+				device.os_release = absoluteDevice.os.releaseId;
+			}
+			if(absoluteDevice.os.ubr) {
+				device.os_ubr = absoluteDevice.os.ubr;
+			}
+			if(absoluteDevice.os.editionId) {
+				device.os_edition = absoluteDevice.os.editionId;
+			}
+			if(absoluteDevice.os.serialNumber) {
+				device.os_serial_number = absoluteDevice.os.serialNumber;
 			}
 			if(absoluteDevice.os.architecture) {
 				device.os_architecture = absoluteDevice.os.architecture;
@@ -341,20 +363,18 @@ else {
         <sys_class_name>sys_ui_action</sys_class_name>
         <sys_created_by>matt.wood</sys_created_by>
         <sys_created_on>2019-01-25 22:41:55</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>baa0dca0db1be740cb8fd77648961912</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_name>View Absolute Device</sys_name>
         <sys_overrides/>
         <sys_package display_value="Absolute ITSM Connector" source="x_absr_itsm">334c86f7dbc7a740cb8fd77648961963</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Absolute ITSM Connector">334c86f7dbc7a740cb8fd77648961963</sys_scope>
         <sys_update_name>sys_ui_action_baa0dca0db1be740cb8fd77648961912</sys_update_name>
-        <sys_updated_by>matt.wood</sys_updated_by>
-        <sys_updated_on>2019-09-05 16:07:37</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-28 23:03:17</sys_updated_on>
         <table>cmdb_ci_computer</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

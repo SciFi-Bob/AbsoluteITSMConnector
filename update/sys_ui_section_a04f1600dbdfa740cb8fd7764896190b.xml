@@ -1,844 +1,186 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_ui_section caption="" section_id="a04f1600dbdfa740cb8fd7764896190b" sys_domain="global" table="x_absr_itsm_device" version="3" view="">
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.begin_split</element>
+            <element>id</element>
             <position>0</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>244f1600dbdfa740cb8fd7764896190d</sys_id>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-28 22:54:16</sys_created_on>
+            <sys_id>d90dad514f70001024a5aa95d310c71d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type>.begin_split</type>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>antivirus_definition</element>
-            <position>1</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>a44f1600dbdfa740cb8fd7764896190d</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>antivirus_definition_date</element>
-            <position>2</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>284f1600dbdfa740cb8fd7764896190d</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>antivirus_name</element>
-            <position>3</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>a84f1600dbdfa740cb8fd7764896190d</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>antivirus_version</element>
-            <position>4</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>2c4f1600dbdfa740cb8fd7764896190d</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>average_daily_usage_hours_minutes</element>
-            <position>5</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>ac4f1600dbdfa740cb8fd7764896190d</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>bios_release_date</element>
-            <position>6</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>204f1600dbdfa740cb8fd7764896190e</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>bios_smbios_version</element>
-            <position>7</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>a04f1600dbdfa740cb8fd7764896190e</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>bios_version</element>
-            <position>8</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>244f1600dbdfa740cb8fd7764896190e</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>bios_version_date</element>
-            <position>9</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>a44f1600dbdfa740cb8fd7764896190e</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>boot_drive_available_space</element>
-            <position>10</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>284f1600dbdfa740cb8fd7764896190e</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>computer</element>
-            <position>11</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>a84f1600dbdfa740cb8fd7764896190e</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>cpu_logical_cores</element>
-            <position>12</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>2c4f1600dbdfa740cb8fd7764896190e</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>cpu_name</element>
-            <position>13</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>ac4f1600dbdfa740cb8fd7764896190e</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>cpu_physical_cores</element>
-            <position>14</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>204f1600dbdfa740cb8fd7764896190f</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>cpu_processor_speed</element>
-            <position>15</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>a04f1600dbdfa740cb8fd7764896190f</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>device_data_raw</element>
-            <position>16</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>244f1600dbdfa740cb8fd7764896190f</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-28 22:54:16</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>device_name</element>
-            <position>17</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>a44f1600dbdfa740cb8fd7764896190f</sys_id>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-28 22:54:16</sys_created_on>
+            <sys_id>5d0dad514f70001024a5aa95d310c71d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>domain</element>
-            <position>18</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>284f1600dbdfa740cb8fd7764896190f</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>edd_last_updated</element>
-            <position>19</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>a84f1600dbdfa740cb8fd7764896190f</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>edd_status</element>
-            <position>20</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>2c4f1600dbdfa740cb8fd7764896190f</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>encryption_algorithm</element>
-            <position>21</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>ac4f1600dbdfa740cb8fd7764896190f</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>encryption_data_received_utc</element>
-            <position>22</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>204f1600dbdfa740cb8fd77648961910</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>encryption_hardware_encryption</element>
-            <position>23</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>a04f1600dbdfa740cb8fd77648961910</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>encryption_key_size</element>
-            <position>24</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>244f1600dbdfa740cb8fd77648961910</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>encryption_name</element>
-            <position>25</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>a44f1600dbdfa740cb8fd77648961910</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>encryption_status</element>
-            <position>26</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>284f1600dbdfa740cb8fd77648961910</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>encryption_status_description</element>
-            <position>27</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>a84f1600dbdfa740cb8fd77648961910</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>encryption_version</element>
-            <position>28</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>2c4f1600dbdfa740cb8fd77648961910</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>enrolled_date</element>
-            <position>29</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>ac4f1600dbdfa740cb8fd77648961910</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.split</element>
-            <position>30</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>204f1600dbdfa740cb8fd77648961911</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type>.split</type>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>hardware_last_updated</element>
-            <position>31</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>a04f1600dbdfa740cb8fd77648961911</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>hardware_status</element>
-            <position>32</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>244f1600dbdfa740cb8fd77648961911</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>id</element>
-            <position>33</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>a44f1600dbdfa740cb8fd77648961911</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>identifier</element>
-            <position>34</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>284f1600dbdfa740cb8fd77648961911</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>last_connected_utc</element>
-            <position>35</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>a84f1600dbdfa740cb8fd77648961911</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>local_ip</element>
-            <position>36</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>2c4f1600dbdfa740cb8fd77648961911</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>make</element>
-            <position>37</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>ac4f1600dbdfa740cb8fd77648961911</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>memory_available</element>
-            <position>38</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>204f1600dbdfa740cb8fd77648961912</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>memory_total</element>
-            <position>39</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>a04f1600dbdfa740cb8fd77648961912</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>model</element>
-            <position>40</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>244f1600dbdfa740cb8fd77648961912</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>os_architecture</element>
-            <position>41</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>a44f1600dbdfa740cb8fd77648961912</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>os_build</element>
-            <position>42</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>284f1600dbdfa740cb8fd77648961912</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>os_csd_version</element>
-            <position>43</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>a84f1600dbdfa740cb8fd77648961912</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>os_install_date</element>
-            <position>44</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>2c4f1600dbdfa740cb8fd77648961912</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>os_last_boot_time</element>
-            <position>45</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>ac4f1600dbdfa740cb8fd77648961912</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>os_name</element>
-            <position>46</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>204f1600dbdfa740cb8fd77648961913</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>os_product_key</element>
-            <position>47</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>a04f1600dbdfa740cb8fd77648961913</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>os_version</element>
-            <position>48</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>244f1600dbdfa740cb8fd77648961913</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>pagefile_size</element>
-            <position>49</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>a44f1600dbdfa740cb8fd77648961913</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>policy_group_name</element>
-            <position>50</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>284f1600dbdfa740cb8fd77648961913</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>policy_group_uid</element>
-            <position>51</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>a84f1600dbdfa740cb8fd77648961913</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>public_ip</element>
-            <position>52</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>2c4f1600dbdfa740cb8fd77648961913</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>serial</element>
-            <position>53</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>ac4f1600dbdfa740cb8fd77648961913</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>software_last_updated</element>
-            <position>54</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>204f1600dbdfa740cb8fd77648961914</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>software_status</element>
-            <position>55</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>a04f1600dbdfa740cb8fd77648961914</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>timezone</element>
-            <position>56</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>244f1600dbdfa740cb8fd77648961914</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>usage_classification</element>
-            <position>57</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>a44f1600dbdfa740cb8fd77648961914</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-28 22:54:16</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>username</element>
-            <position>58</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>284f1600dbdfa740cb8fd77648961914</sys_id>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-28 22:54:16</sys_created_on>
+            <sys_id>dd0dad514f70001024a5aa95d310c71d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-28 22:54:16</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.end_split</element>
-            <position>59</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:02</sys_created_on>
-            <sys_id>a84f1600dbdfa740cb8fd77648961914</sys_id>
+            <element>public_ip</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-28 22:54:16</sys_created_on>
+            <sys_id>510dad514f70001024a5aa95d310c71e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:02</sys_updated_on>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-28 22:54:16</sys_updated_on>
             <sys_user/>
-            <type>.end_split</type>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>local_ip</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-28 22:54:16</sys_created_on>
+            <sys_id>d10dad514f70001024a5aa95d310c71e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-28 22:54:16</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>timezone</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-28 22:54:16</sys_created_on>
+            <sys_id>550dad514f70001024a5aa95d310c71e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-28 22:54:16</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-28 22:54:16</sys_created_on>
+            <sys_id>d50dad514f70001024a5aa95d310c71e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-28 22:54:16</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>identifier</element>
+            <position>7</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-28 22:54:16</sys_created_on>
+            <sys_id>590dad514f70001024a5aa95d310c71e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-28 22:54:16</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>last_connected_utc</element>
+            <position>8</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-28 22:54:16</sys_created_on>
+            <sys_id>d90dad514f70001024a5aa95d310c71e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-28 22:54:16</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>enrolled_date</element>
+            <position>9</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-28 22:54:16</sys_created_on>
+            <sys_id>5d0dad514f70001024a5aa95d310c71e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-28 22:54:16</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>usage_classification</element>
+            <position>10</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-28 22:54:16</sys_created_on>
+            <sys_id>dd0dad514f70001024a5aa95d310c71e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-28 22:54:16</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>average_daily_usage_hours_minutes</element>
+            <position>11</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-28 22:54:16</sys_created_on>
+            <sys_id>510dad514f70001024a5aa95d310c71f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-28 22:54:16</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>domain</element>
+            <position>12</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-28 22:54:16</sys_created_on>
+            <sys_id>d10dad514f70001024a5aa95d310c71f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_absr_itsm_device" sys_domain="global" view="Default view">a04f1600dbdfa740cb8fd7764896190b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-28 22:54:16</sys_updated_on>
+            <sys_user/>
+            <type/>
         </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption/>
@@ -847,8 +189,7 @@
             <roles/>
             <sys_class_name>sys_ui_section</sys_class_name>
             <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 19:36:01</sys_created_on>
-            <sys_customer_update>false</sys_customer_update>
+            <sys_created_on>2019-01-24 22:42:44</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>a04f1600dbdfa740cb8fd7764896190b</sys_id>
@@ -857,13 +198,12 @@
             <sys_overrides/>
             <sys_package display_value="Absolute ITSM Connector" source="x_absr_itsm">334c86f7dbc7a740cb8fd77648961963</sys_package>
             <sys_policy/>
-            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="Absolute ITSM Connector">334c86f7dbc7a740cb8fd77648961963</sys_scope>
             <sys_update_name>sys_ui_section_a04f1600dbdfa740cb8fd7764896190b</sys_update_name>
             <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 19:36:01</sys_updated_on>
+            <sys_updated_on>2019-01-24 22:42:44</sys_updated_on>
             <sys_user/>
-            <title>true</title>
+            <title>false</title>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>
         </sys_ui_section>

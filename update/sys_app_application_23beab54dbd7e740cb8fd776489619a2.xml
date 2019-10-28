@@ -11,7 +11,6 @@
         <sys_class_name>sys_app_application</sys_class_name>
         <sys_created_by>matt.wood</sys_created_by>
         <sys_created_on>2019-01-25 20:03:47</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>23beab54dbd7e740cb8fd776489619a2</sys_id>
@@ -20,7 +19,6 @@
         <sys_overrides/>
         <sys_package display_value="Absolute ITSM Connector" source="x_absr_itsm">334c86f7dbc7a740cb8fd77648961963</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Absolute ITSM Connector">334c86f7dbc7a740cb8fd77648961963</sys_scope>
         <sys_update_name>sys_app_application_23beab54dbd7e740cb8fd776489619a2</sys_update_name>
         <sys_updated_by>matt.wood</sys_updated_by>

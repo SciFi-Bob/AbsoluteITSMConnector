@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="os_serial_number" label="OS Serial Number" language="en" table="x_absr_itsm_device">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>os_serial_number</element>
+            <help/>
+            <hint/>
+            <label>OS Serial Number</label>
+            <language>en</language>
+            <name>x_absr_itsm_device</name>
+            <plural>OS Serial Numbers</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-28 22:18:58</sys_created_on>
+            <sys_id>00f4a5594f30001024a5aa95d310c7a2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>OS Serial Number</sys_name>
+            <sys_package display_value="Absolute ITSM Connector" source="x_absr_itsm">334c86f7dbc7a740cb8fd77648961963</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Absolute ITSM Connector">334c86f7dbc7a740cb8fd77648961963</sys_scope>
+            <sys_update_name>sys_documentation_x_absr_itsm_device_os_serial_number_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-28 22:18:58</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

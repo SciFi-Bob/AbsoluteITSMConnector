@@ -3,126 +3,182 @@
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>os_name</element>
             <position>0</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 23:28:11</sys_created_on>
-            <sys_id>d1649744db13e740cb8fd77648961902</sys_id>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-28 22:54:17</sys_created_on>
+            <sys_id>1d0dad514f70001024a5aa95d310c732</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Operating System" display_value="Operating System" name="x_absr_itsm_device" sys_domain="global" view="Default view">c7bd4b80db13e740cb8fd776489619c5</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 23:28:11</sys_updated_on>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-28 22:54:17</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>os_last_boot_time</element>
+            <element>os_edition</element>
             <position>1</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 23:28:11</sys_created_on>
-            <sys_id>55649744db13e740cb8fd77648961902</sys_id>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-28 22:54:17</sys_created_on>
+            <sys_id>9d0dad514f70001024a5aa95d310c732</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Operating System" display_value="Operating System" name="x_absr_itsm_device" sys_domain="global" view="Default view">c7bd4b80db13e740cb8fd776489619c5</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 23:28:11</sys_updated_on>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-28 22:54:17</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>os_architecture</element>
             <position>2</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 23:28:11</sys_created_on>
-            <sys_id>d5649744db13e740cb8fd77648961902</sys_id>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-28 22:54:17</sys_created_on>
+            <sys_id>110dad514f70001024a5aa95d310c733</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Operating System" display_value="Operating System" name="x_absr_itsm_device" sys_domain="global" view="Default view">c7bd4b80db13e740cb8fd776489619c5</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 23:28:11</sys_updated_on>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-28 22:54:17</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>os_last_boot_time</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-28 22:54:17</sys_created_on>
+            <sys_id>910dad514f70001024a5aa95d310c733</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Operating System" display_value="Operating System" name="x_absr_itsm_device" sys_domain="global" view="Default view">c7bd4b80db13e740cb8fd776489619c5</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-28 22:54:17</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>os_install_date</element>
-            <position>3</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 23:28:11</sys_created_on>
-            <sys_id>59649744db13e740cb8fd77648961902</sys_id>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-28 22:54:17</sys_created_on>
+            <sys_id>150dad514f70001024a5aa95d310c733</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Operating System" display_value="Operating System" name="x_absr_itsm_device" sys_domain="global" view="Default view">c7bd4b80db13e740cb8fd776489619c5</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 23:28:11</sys_updated_on>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-28 22:54:17</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>os_serial_number</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-28 22:54:17</sys_created_on>
+            <sys_id>950dad514f70001024a5aa95d310c733</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Operating System" display_value="Operating System" name="x_absr_itsm_device" sys_domain="global" view="Default view">c7bd4b80db13e740cb8fd776489619c5</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-28 22:54:17</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>4</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 23:28:11</sys_created_on>
-            <sys_id>d9649744db13e740cb8fd77648961902</sys_id>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-28 22:54:17</sys_created_on>
+            <sys_id>190dad514f70001024a5aa95d310c733</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Operating System" display_value="Operating System" name="x_absr_itsm_device" sys_domain="global" view="Default view">c7bd4b80db13e740cb8fd776489619c5</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 23:28:11</sys_updated_on>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-28 22:54:17</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>os_version</element>
-            <position>5</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 23:28:11</sys_created_on>
-            <sys_id>5d649744db13e740cb8fd77648961902</sys_id>
+            <position>7</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-28 22:54:17</sys_created_on>
+            <sys_id>990dad514f70001024a5aa95d310c733</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Operating System" display_value="Operating System" name="x_absr_itsm_device" sys_domain="global" view="Default view">c7bd4b80db13e740cb8fd776489619c5</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 23:28:11</sys_updated_on>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-28 22:54:17</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>os_build</element>
-            <position>6</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 23:28:11</sys_created_on>
-            <sys_id>dd649744db13e740cb8fd77648961902</sys_id>
+            <position>8</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-28 22:54:17</sys_created_on>
+            <sys_id>1d0dad514f70001024a5aa95d310c733</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Operating System" display_value="Operating System" name="x_absr_itsm_device" sys_domain="global" view="Default view">c7bd4b80db13e740cb8fd776489619c5</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 23:28:11</sys_updated_on>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-28 22:54:17</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>os_release</element>
+            <position>9</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-28 22:54:17</sys_created_on>
+            <sys_id>9d0dad514f70001024a5aa95d310c733</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Operating System" display_value="Operating System" name="x_absr_itsm_device" sys_domain="global" view="Default view">c7bd4b80db13e740cb8fd776489619c5</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-28 22:54:17</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>os_ubr</element>
+            <position>10</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-28 22:54:17</sys_created_on>
+            <sys_id>110dad514f70001024a5aa95d310c734</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Operating System" display_value="Operating System" name="x_absr_itsm_device" sys_domain="global" view="Default view">c7bd4b80db13e740cb8fd776489619c5</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-28 22:54:17</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>os_csd_version</element>
-            <position>7</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 23:28:11</sys_created_on>
-            <sys_id>51649744db13e740cb8fd77648961903</sys_id>
+            <position>11</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-28 22:54:17</sys_created_on>
+            <sys_id>910dad514f70001024a5aa95d310c734</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Operating System" display_value="Operating System" name="x_absr_itsm_device" sys_domain="global" view="Default view">c7bd4b80db13e740cb8fd776489619c5</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 23:28:11</sys_updated_on>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-28 22:54:17</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>os_product_key</element>
-            <position>8</position>
-            <sys_created_by>matt.wood</sys_created_by>
-            <sys_created_on>2019-01-24 23:28:11</sys_created_on>
-            <sys_id>d1649744db13e740cb8fd77648961903</sys_id>
+            <position>12</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-28 22:54:17</sys_created_on>
+            <sys_id>150dad514f70001024a5aa95d310c734</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Operating System" display_value="Operating System" name="x_absr_itsm_device" sys_domain="global" view="Default view">c7bd4b80db13e740cb8fd776489619c5</sys_ui_section>
-            <sys_updated_by>matt.wood</sys_updated_by>
-            <sys_updated_on>2019-01-24 23:28:11</sys_updated_on>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-28 22:54:17</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -134,7 +190,6 @@
             <sys_class_name>sys_ui_section</sys_class_name>
             <sys_created_by>matt.wood</sys_created_by>
             <sys_created_on>2019-01-24 22:59:05</sys_created_on>
-            <sys_customer_update>false</sys_customer_update>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>c7bd4b80db13e740cb8fd776489619c5</sys_id>
@@ -143,7 +198,6 @@
             <sys_overrides/>
             <sys_package display_value="Absolute ITSM Connector" source="x_absr_itsm">334c86f7dbc7a740cb8fd77648961963</sys_package>
             <sys_policy/>
-            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="Absolute ITSM Connector">334c86f7dbc7a740cb8fd77648961963</sys_scope>
             <sys_update_name>sys_ui_section_c7bd4b80db13e740cb8fd776489619c5</sys_update_name>
             <sys_updated_by>matt.wood</sys_updated_by>
